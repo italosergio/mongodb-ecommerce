@@ -1,25 +1,25 @@
 db.produtos.updateMany(
   {},
   {
-    $set: { avaliacao: 0 }
+    $set: { avaliacao: 0 },
   },
 );
 
 db.produtos.updateMany(
   {
-    tags: { $in: ["bovino"]  }
+    tags: { $in: ["bovino"] }
   },
   {
-    $inc: { avaliacao: 5 }
+    $inc: { avaliacao: 5 },
   },
 );
 
 db.produtos.updateMany(
   {
-    tags: { $in: ["ave"]  }
+    tags: { $in: ["ave"] }
   },
   {
-    $inc: { avaliacao: 3 }
+    $inc: { avaliacao: 3 },
   },
 );
 

@@ -1,15 +1,15 @@
 db.produtos.updateMany(
   {
-    nome: "Big Mac"
+    nome: "Big Mac",
   },
   {
-    $currentDate: { ultimaModificacao: { $type: "date" } }
+    $currentDate: { ultimaModificacao: { $type: "date" } },
   },
 );
 
 db.produtos.find(
   {
-    ultimaModificacao: { $exists: 1 }
+    ultimaModificacao: { $exists: 1 },
   },
   {
     _id: 0,
