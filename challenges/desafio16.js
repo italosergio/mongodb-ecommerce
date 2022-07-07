@@ -3,7 +3,7 @@ db.produtos.updateMany(
     nome: "Big Mac"
   },
   {
-    $set: { ultimaModificacao: new Date() }
+    $currentDate: { ultimaModificacao: { $type: "date" } }
   },
 );
 
