@@ -1,1 +1,5 @@
-db.produtos.countDocuments({ ingredientes: { $size: 4 } });
+db.produtos.find({
+  $where: function ingredientsSize() {
+    return this.ingredientes.length === 4;
+  },
+}).count();
